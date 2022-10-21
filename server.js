@@ -12,5 +12,8 @@ app.post("/scores", (req, res) => {
     highest_score = Math.max(req.body.score, highest_score);
     res.send({ score: highest_score });
 });
+app.post("/scores/override", (req, res) => {
+    highest_score = req.body.score;
+}
 
 http.listen(PORT);
