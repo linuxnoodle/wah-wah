@@ -104,8 +104,7 @@ function draw(){
       fill(64, 64, 128);
       textSize(32);
       text(`
-        tu mortuus est. tua score est ${bird.score}.
-        vos altissimus score est ${bird.high_score}.
+        tu mortuus est. tuus summum score est ${bird.high_score}.
         altissimus score in ubique est ${bird.global_high_score}.
         Press space or click to restart.`
         , windowWidth/3, 2*windowHeight/5);
