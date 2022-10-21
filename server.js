@@ -2,7 +2,7 @@ const express = require('express');
 const app = express();
 
 const http = require("http").createServer(app);
-const PORT = 8080;
+const PORT = 80;
 
 let highest_score = 0;
 
