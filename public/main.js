@@ -44,7 +44,7 @@ function setup(){
   // initialize music
   let music = createAudio("funky.opus");
   music.loop();
-  music.autoplay();
+  music.play();
 
   // initialize textures
   neroTexture = loadImage("nero.png");
