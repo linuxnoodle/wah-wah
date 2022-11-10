@@ -9,10 +9,18 @@ var bird = {
 var pipes = [];
 var paused = true, start = true, dead = false;
 
-var neroTexture, pillarTexture, backgroundTexture;
+var neroTexture, pillarTexture, backgroundTexture, music;
 
 function windowResized(){
   resizeCanvas(windowWidth, windowHeight);
+}
+
+function preload(){
+  // load assets
+  neroTexture = loadImage("nero.png");
+  pillarTexture = loadImage("pillar.png");
+  backgroundTexture = loadImage("burning.png");
+  music = createAudio("funky.opus");
 }
 
 // initialization
@@ -39,17 +47,10 @@ function setup(){
       given_point: false
     });
   }, 850);
-  // yes, this shouild probably be in preload
-  // no, i do not care
+
   // initialize music
-  let music = createAudio("funky.opus");
   music.loop();
   music.play();
-
-  // initialize textures
-  neroTexture = loadImage("nero.png");
-  pillarTexture = loadImage("pillar.png");
-  backgroundTexture = loadImage("burning.png");
 
   // show initial instructions
   paused = true;
